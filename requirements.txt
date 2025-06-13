@@ -1,0 +1,4 @@
+pandas==2.2.1 
+numpy==2.3.0
+matplotlib==3.10.3
+polars==1.30.0

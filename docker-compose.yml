@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  data_tools:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: data_tools
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/home/jovyan/work
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    command: start-notebook.sh --NotebookApp.token=''
