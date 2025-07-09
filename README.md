@@ -79,6 +79,16 @@ docker compose down
 
 ---
 
+## 🗃️ Extras
+
+Como acceder a la consola del contenedor:
+
+```bash
+docker exec -it data_tools /bin/bash
+```
+
+---
+
 ## 🧑‍💻 Autor
 
 Creado por Oscar Mosquea.  
