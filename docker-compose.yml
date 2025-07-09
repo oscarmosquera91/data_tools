@@ -12,4 +12,5 @@ services:
       - .:/home/jovyan/work
     environment:
       - JUPYTER_ENABLE_LAB=yes
+    entrypoint: ["/home/jovyan/entrypoint.sh"]
     command: start-notebook.sh --NotebookApp.token=''

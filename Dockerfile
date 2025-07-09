@@ -7,4 +7,9 @@ WORKDIR /home/jovyan/work
 COPY requirements.txt .
 
 # Instala paquetes adicionales (si los hay)
-RUN pip install --no-cache-dir -r requirements.txt || true
+RUN pip install --no-cache-dir -r requirements.txt
+
+USER root
+COPY entrypoint.sh /home/jovyan/entrypoint.sh
+RUN chmod +x /home/jovyan/entrypoint.sh
+USER $NB_UID
